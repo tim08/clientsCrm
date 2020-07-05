@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h2 th:text="${message}"></h2>
+<a href="/add_new_client_ip">Add new client IP</a>
+<br>
+<a href="/add_new_client_ul">Add new client UL</a>
+<br>
+
+<form th:action="@{/find}" method="get">
+    <label>Find client by id</label>
+    <input type="number" th:name="id"/>
+    <input type="submit" title="Поиск"/>
+</form>
+</body>
+</html>
