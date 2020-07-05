@@ -61,16 +61,16 @@ public class MainController {
         clientUlRepository.save(clientUl);
 
         model.addAttribute("clientUl", clientUl);
-        model.addAttribute("message", "This is message from flash");
+        model.addAttribute("message", "Created clientUl");
         return "index";
     }
 
     @PostMapping("/submit_client_ip")
     public String submit_client_ip(@ModelAttribute ClientIp clientIp, Model model) {
 
-        clientIp.status = "active";
-        clientIpRepository.save(clientIp);
 
+        clientIpRepository.save(clientIp);
+        model.addAttribute("message", "Created clientIp");
         return "index";
     }
 
